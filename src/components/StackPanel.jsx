@@ -1,3 +1,4 @@
+import React from 'react';
 function StackPanel({ stack, onRemove, onRemoveAll }) {
   return (
     <aside className="stack-panel">

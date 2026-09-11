@@ -1,3 +1,4 @@
+import React from 'react';
 function TechnologyCard({ technology, isAdded, onAdd }) {
   return (
     <article className="technology-card">
