@@ -853,3 +853,20 @@ a {
   border: 2px solid #f87171 !important; 
  
 }
+
+
+.technology-card {
+  transition: all 0.3s ease-in-out;
+}
+
+
+.technology-card:hover {
+  transform: translateY(-6px); 
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1); 
+  border-color: #cbd5e1; 
+}
+
+
+.technology-card.added:hover {
+  border-color: #ff4d4d !important; 
+}
