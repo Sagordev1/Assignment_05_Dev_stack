@@ -20,6 +20,14 @@ A responsive React website that helps developers explore technologies and build 
 - React-Toastify
 - JSON
 
+## ✨ 3 Key Features
+
+1. **Dynamic Tech Exploration & Selection:** Browse through technologies fetched dynamically from JSON. Add items to your stack with visual state indicators and hover feedback (duplicate additions are prevented).
+2. **Real-time Stack Management:** View and manage your selected stack in a dedicated sidebar panel with options to remove individual technologies or clear the entire stack at once.
+3. **Responsive UI & Loading States:** Clean, responsive design featuring custom brand gradients, a mobile hamburger menu, interactive card interactions, and smooth loading spinners.
+
+---
+
 ## Project Structure
 
 ```text
@@ -46,21 +54,6 @@ dev-stack-builder/
 └── README.md
 ```
 
-## Run Locally
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the local Vite URL shown in the terminal.
-
-For a production build:
-
-```bash
-npm run build
-npm run preview
-```
 
 ## Design Notes
 
