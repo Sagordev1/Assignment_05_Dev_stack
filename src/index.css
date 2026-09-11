@@ -902,3 +902,23 @@ a {
   font-weight: 700 !important;
   cursor: default;
 }
+
+.technology-card.added {
+  border: 1.5px solid #e11d48 !important;
+}
+
+.technology-card.added span,
+.technology-card.added p,
+.technology-card.added div {
+  font-weight: 700 !important;
+}
+
+
+.technology-card.added button,
+.technology-card .add-button.added {
+  background: transparent !important;
+  color: #e11d48 !important;
+  border: none !important;
+  font-weight: 700 !important;
+  cursor: default;
+}
