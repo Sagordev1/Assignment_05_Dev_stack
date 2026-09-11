@@ -1,7 +1,8 @@
 import React from 'react';
+
 function TechnologyCard({ technology, isAdded, onAdd }) {
   return (
-    <article className="technology-card">
+    <article className={`technology-card ${isAdded ? 'added' : ''}`}>
       <div className="card-top">
         <img src={technology.icon} alt="" className="tech-icon" />
         {technology.badge && <span className="badge">{technology.badge}</span>}

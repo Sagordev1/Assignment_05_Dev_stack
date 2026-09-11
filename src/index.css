@@ -848,3 +848,8 @@ a {
     width: 230px;
   }
 }
+
+.technology-card.added {
+  border: 2px solid #f87171 !important; 
+ 
+}

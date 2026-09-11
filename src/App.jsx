@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TechnologyCard from './components/TechnologyCard';
@@ -24,7 +23,6 @@ function App() {
         setTechnologies(data);
       } catch (error) {
         console.error(error);
-        toast.error('Unable to load technology data.');
       } finally {
         setLoading(false);
       }
@@ -35,34 +33,20 @@ function App() {
 
   const addToStack = (technology) => {
     if (stack.some((item) => item.id === technology.id)) {
-      toast.warning(`${technology.name} is already in your stack.`);
       return;
     }
 
     setStack((current) => [...current, technology]);
-    toast.success(`${technology.name} added to your stack.`);
   };
 
   const removeFromStack = (id) => {
-    const removed = stack.find((item) => item.id === id);
-
     setStack((current) =>
       current.filter((item) => item.id !== id)
     );
-
-    if (removed) {
-      toast.info(`${removed.name} removed from your stack.`);
-    }
   };
 
   const removeAll = () => {
-    if (!stack.length) {
-      toast.warning('Your stack is already empty.');
-      return;
-    }
-
     setStack([]);
-    toast.info('All technologies removed from your stack.');
   };
 
   return (
