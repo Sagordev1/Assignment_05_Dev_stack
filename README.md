@@ -102,15 +102,4 @@ Conditional rendering means showing different UI depending on a condition. In th
 
 A parent sends data through props, such as `technology` and `isAdded` to `TechnologyCard`. The child can send information back by calling a callback function passed as a prop, such as `onAdd(technology)`.
 
-## Git Commit Requirement
 
-This project was prepared with meaningful commits covering the main development stages. If you create a new GitHub repository from the project folder, keep the commit history or make equivalent meaningful commits before submission.
-
-## Submission Checklist
-
-- [ ] Push the complete project to a public GitHub repository.
-- [ ] Add the GitHub repository link to the submission form.
-- [ ] Deploy the project to Vercel, Netlify, Cloudflare Pages, or another supported host.
-- [ ] Add the live site link to the submission form.
-- [ ] Submit the required project report and presentation files.
-- [ ] Record the required project walkthrough if your course asks for it.
