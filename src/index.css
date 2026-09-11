@@ -401,14 +401,13 @@ a {
 ------------------------------------------- */
 .technology-card.added {
   border: 1.5px solid #e11d48 !important;
-  background-color: #fff1f2 !important; /* হালকা গোলাপি/লালচে ব্যাকগ্রাউন্ড টিন্ট */
+  background-color: #ffffff !important;
 }
 
 .technology-card.added:hover {
   border-color: #be123c !important;
 }
 
-/* Corner Badges (Popular, Versatile, Fullstack etc.) Bold & Red Text */
 .technology-card.added .badge,
 .technology-card.added .card-top span,
 .technology-card.added .card-top div {
@@ -417,14 +416,13 @@ a {
   font-weight: 800 !important;
 }
 
-/* Added to Stack Button Style (Text-only look) */
 .technology-card.added .add-button,
 .technology-card .add-button.added {
-  background: transparent !important;
+  background-color: #fff1f2 !important;
   color: #e11d48 !important;
   border: none !important;
   box-shadow: none !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   font-size: 11px !important;
   cursor: default !important;
 }
