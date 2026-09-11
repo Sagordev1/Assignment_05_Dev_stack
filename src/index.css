@@ -870,3 +870,24 @@ a {
 .technology-card.added:hover {
   border-color: #ff4d4d !important; 
 }
+
+/* Card selected state styling */
+.technology-card.added {
+  border: 1.5px solid #e11d48 !important; /* লালচে-গোলাপী বর্ডার */
+}
+
+/* Badge/Tag color for added card */
+.technology-card.added .badge {
+  color: #e11d48 !important;
+  background-color: transparent !important;
+}
+
+
+.technology-card .add-button.added,
+.technology-card.added .add-button {
+  background: transparent !important;
+  color: #e11d48 !important;
+  border: none !important;
+  font-weight: 600;
+  cursor: default;
+}
