@@ -1,43 +1,45 @@
+Markdown
 # 🚀 Dev Stack — Development Stack Builder
 
-> A responsive React application designed to help developers explore modern technologies and build their custom personal development stacks on the fly.
+> A responsive React website that helps developers explore technologies and build a personal development stack. The UI follows the supplied design reference with a clean white layout, orange → pink → violet gradient branding, technology cards, and a responsive stack sidebar.
 
-![Banner](public/assets/hero-stack.png)
+![Hero Stack Banner](public/assets/hero-stack.png)
 
 ---
 
 ## 📋 Table of Contents
 - [✨ Key Features](#-key-features)
-- [🛠️ Tech Stack & Dependencies](#️-tech-stack--dependencies)
+- [🛠️ Technologies & Dependencies](#️-technologies--dependencies)
 - [📁 Project Structure](#-project-structure)
-- [🎨 Design & Styling](#-design--styling)
-- [⚙️ Getting Started (Local Setup)](#️-getting-started-local-setup)
-- [💡 React Concepts & Architecture Q&A](#-react-concepts--architecture-qa)
+- [🎨 Design Notes](#-design-notes)
+- [⚙️ Getting Started & Local Setup](#️-getting-started--local-setup)
 - [🔗 Links & Live Demo](#-links--live-demo)
+- [💡 React Questions & Answers](#-react-questions--answers)
 - [📄 License](#-license)
 
 ---
 
 ## ✨ Key Features
 
-1. **Dynamic Tech Exploration & Selection:** Browse through technologies fetched dynamically from a local JSON file. Add items to your stack with visual state indicators and hover feedback (duplicate additions are safely prevented).
-2. **Real-time Stack Management:** View and manage your selected stack in a dedicated sidebar panel with options to remove individual technologies or clear the entire stack at once.
-3. **Responsive UI & Loading States:** Clean, modern design featuring custom brand gradients, a mobile hamburger menu, interactive card interactions, and smooth loading spinners.
-4. **Toast Notifications:** Powered by `react-toastify` to provide instant feedback for add, duplicate, remove, and clear-all actions.
+1. **Dynamic Tech Exploration & Selection:** Browse through 12 technologies fetched dynamically from a separate JSON file (`technologies.json`). Add items to your stack with visual state indicators and hover feedback (duplicate additions are safely prevented).
+2. **Real-time Stack Management:** View and manage your selected stack in a dedicated responsive sidebar panel with options to remove individual technologies or clear the entire stack at once with instant notifications.
+3. **Responsive UI & Loading States:** Clean, responsive design featuring custom brand gradients, a mobile hamburger menu, interactive card interactions, and smooth loading spinners.
+4. **Toast Notifications:** Integrated using `React-Toastify` to provide instant alerts for add, duplicate, remove, and remove-all actions.
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## 🛠️ Technologies & Dependencies
 
-### Core Technologies
-* **React.js** (v18+)
+### Core Technologies Used
+* **React.js**
 * **JavaScript (ES6+)**
-* **Vite** (Lightning-fast build tool)
-* **CSS3** (Custom properties & modern flexbox/grid layouts)
+* **Vite**
+* **CSS3**
+* **JSON**
 
-### Dependencies
+### Project Dependencies
 * `react` / `react-dom`
-* `react-toastify` (For sleek UI alert notifications)
+* `react-toastify`
 
 ---
 
@@ -65,16 +67,16 @@ dev-stack-builder/
 ├── index.html
 ├── package.json
 └── README.md
-🎨 Design & Styling
-The shared brand gradient is defined globally in src/index.css:
+🎨 Design Notes
+The shared brand gradient is defined once globally in src/index.css:
 
 CSS
 :root {
   --brand-gradient: linear-gradient(90deg, #ff6b22 0%, #ef2779 52%, #8e2de2 100%);
 }
-This variable is consistently utilized across the brand treatment, hero highlights, primary buttons, and interactive borders to ensure unified theme management from a single source of truth.
+The same CSS variable is used for the brand treatment, hero highlight, and primary buttons, ensuring the theme can be easily managed and updated from a single place.
 
-⚙️ Getting Started (Local Setup)
+⚙️ Getting Started & Local Setup
 Follow these steps to run the project locally on your machine:
 
 1. Clone the Repository
@@ -87,38 +89,34 @@ npm install
 3. Run the Development Server
 Bash
 npm run dev
-Open your browser and navigate to http://localhost:5173 (or the port specified in your terminal).
-
-💡 React Concepts & Architecture Q&A
-1. What is JSX, and why is it used in React?
-JSX is a syntax extension that lets us write HTML-like UI templates directly inside JavaScript. React uses JSX because it makes component structure significantly easier to read, write, and maintain.
-
-2. What is the difference between props and state?
-Props are read-only data passed into a component by its parent.
-
-State is local data owned and managed internally by a component that can change over time in response to user actions.
-
-3. What does the useState hook do, and where did you use it in this project?
-useState allows functional components to manage reactive state variables. In this project, it was used for tracking the technology list, the user's selected stack, loading statuses, and the mobile navigation menu toggle state.
-
-4. What does the useEffect hook do, and why did you need it to load the JSON data?
-useEffect handles side effects (like data fetching, subscriptions, or manual DOM manipulations) after component rendering. It was used here to fetch technologies.json asynchronously when the application initially mounts.
-
-5. Why does every item in a .map() list need a unique key prop?
-React uses the key attribute to uniquely identify each list item between renders. A stable, unique key helps React efficiently reconcile the Virtual DOM and update only the items that have changed.
-
-6. What is conditional rendering? Show one place you used it.
-Conditional rendering means displaying different UI elements based on specific runtime conditions. For example, inside the stack panel, an empty-stack message is rendered when stack.length === 0; otherwise, the list of selected technologies is mapped out.
-
-7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
-Parent to Child: Data is passed down via props (e.g., passing technology and isAdded status to TechnologyCard).
-
-Child to Parent: The child communicates back by invoking a callback function passed down through props from the parent (e.g., calling onAdd(technology) when a user clicks the add button).
+Open your browser and visit http://localhost:5173 (or the local URL provided in your terminal).
 
 🔗 Links & Live Demo
 Live Demo: View Live Site
 
-Repository: GitHub Repository
+GitHub Repository: View Repository
+
+💡 React Questions & Answers
+1. What is JSX, and why is it used in React?
+JSX is a syntax that lets us write HTML-like UI inside JavaScript. React uses JSX because it makes component structure easier to read and build.
+
+2. What is the difference between props and state?
+Props are data passed into a component by its parent. State is data owned and managed by a component that can change over time.
+
+3. What does the useState hook do, and where did you use it in this project?
+useState creates state in a React component. I used it for the technology list, selected stack, loading status, and mobile menu state.
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+useEffect runs side effects after rendering. I used it to fetch technologies.json when the app loads.
+
+5. Why does every item in a .map() list need a unique key prop?
+React uses the key to identify each list item between renders. A unique key helps React update only the items that changed.
+
+6. What is conditional rendering? Show one place you used it.
+Conditional rendering means showing different UI depending on a condition. In the stack panel, an empty-stack message is shown when stack.length === 0; otherwise the selected technologies are shown.
+
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+A parent sends data through props, such as technology and isAdded to TechnologyCard. The child can send information back by calling a callback function passed as a prop, such as onAdd(technology).
 
 📄 License
-This project is open-source and available under the MIT License.
+This project is open-source and available under the MIT License
